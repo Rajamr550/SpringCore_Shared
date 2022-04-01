@@ -73,6 +73,11 @@ public class LifeCycleBean implements ApplicationContextAware, InitializingBean,
 	}
 	
 	
+	public void checkPull1()  {
+		// TODO Auto-generated method stub
+		System.out.println("pull 2 merge ...etc");
+	}
+	
 	
 
 }
