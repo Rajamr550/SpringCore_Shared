@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+
+	<bean id="ItemBean" class="com.zensar.Item"  lazy-init="true">
+		<constructor-arg name="name" value="Laptop" />
+		<constructor-arg name="price" value="298098" />
+		<!-- <property name="name" value="Laptop" /> <property name="price" value="298098" 
+			/> -->
+	</bean>
+
+	<bean id="ItemBean1" class="com.zensar.Item" lazy-init="true" >
+	    
+		<property name="name" value="Computer" />
+		<property name="price" value="980980" />
+	</bean>
+
+    <bean id="LifeCycleBean" class="com.zensar.LifeCycleBean" lazy-init="true" init-method="inilizer" destroy-method="MyDestroy" >
+	    
+		<property name="price" value="980980" />
+	</bean> 
+	<bean id="MyBeanPostProcessor" class="com.zensar.MyBeanPostProcessor" lazy-init="true" >
+	</bean> 
+	
+	<bean id="OrderBean" class="com.zensar.Order" lazy-init="true" 
+	init-method="inilizeMethod" destroy-method="destroyMethod">
+		<property name="item" ref="ItemBean" />
+		<property name="title" value="Laptop Purchase" />
+	</bean>
+
+	<bean id="OrderBean1" class="com.zensar.Order" lazy-init="true" init-method="inilizeMethod" destroy-method="destroyMethod">
+		<property name="item" ref="ItemBean1" />
+		<property name="title" value="Computer Purchase" />
+	</bean>
+
+</beans>
