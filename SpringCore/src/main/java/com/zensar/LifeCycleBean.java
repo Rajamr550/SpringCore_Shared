@@ -66,5 +66,12 @@ public class LifeCycleBean implements ApplicationContextAware, InitializingBean,
 		// TODO Auto-generated method stub
 		System.out.println("inside destory() ");
 	}
+	
+	public void checkPull()  {
+		// TODO Auto-generated method stub
+		System.out.println("checking");
+	}
+	
+	
 
 }
