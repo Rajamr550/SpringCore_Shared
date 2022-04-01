@@ -69,8 +69,9 @@ public class LifeCycleBean implements ApplicationContextAware, InitializingBean,
 	
 	public void checkPull()  {
 		// TODO Auto-generated method stub
-		System.out.println("checking");
+		System.out.println("Checking Verified");
 	}
+	
 	
 	
 
