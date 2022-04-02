@@ -10,6 +10,22 @@ public class App {
 	AbstractApplicationContext iocContainer = new ClassPathXmlApplicationContext("BeansClassChat.xml");
 	ChatApplication chatApplication = (ChatApplication) iocContainer.getBean(ChatApplication.class);
 	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
+	System.out.println(chatApplication);
 
     }
 
