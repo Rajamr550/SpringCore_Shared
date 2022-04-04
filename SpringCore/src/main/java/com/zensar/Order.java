@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Order {
     @Autowired
-    @Qualifier("item1")
+    @Qualifier("itemBean1")
     private Item item;
     private String title;
 

@@ -43,5 +43,19 @@ http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 		<property name="item" ref="ItemBean1" />
 		<property name="title" value="Computer Purchase" />
 	</bean>
+	
+	
+		<bean id="itemBean1" class="com.zensar.Item">
+		<property name="name" value="Laptop" />
+		<property name="price" value="50000" />
+
+	</bean>
+	
+	<bean id="orderBean1" class="com.zensar.Order">
+		<property name="title" value="Laptop Purchase" />
+
+	</bean>
 
 </beans>
+
+
