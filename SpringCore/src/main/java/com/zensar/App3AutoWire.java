@@ -1,15 +1,15 @@
 package com.zensar;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App3AutoWire {
 
     public static void main(String[] args) {
 	// TODO Auto-generated method stub
-	AbstractApplicationContext iocContainer = new ClassPathXmlApplicationContext("beans.xml");
-	Order order = (Order) iocContainer.getBean("orderBean1");
-	System.out.println("ORDER " + order);
+	AbstractApplicationContext iocContainer = new AnnotationConfigApplicationContext(AppConfig.class);
+	Order order = (Order) iocContainer.getBean("orderBean");
+	System.out.println("Order: " + order);
 
     }
 
