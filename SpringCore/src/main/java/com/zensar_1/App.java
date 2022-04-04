@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) {
 	// TODO Auto-generated method stub
 	AbstractApplicationContext iocContainer = new ClassPathXmlApplicationContext("BeansClassChat.xml");
-	ChatApplication chatApplication = (ChatApplication) iocContainer.getBean(ChatApplication.class);
+	ChatApplication chatApplication = (ChatApplication) iocContainer.getBean("ChatApplicationBean");
 	System.out.println(chatApplication);
 
     }

@@ -9,18 +9,24 @@ http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 
 
-	<bean id="ItemBean" class="com.zensar.Item"  lazy-init="true">
+	<bean id="item1" class="com.zensar.Item">
 		<constructor-arg name="name" value="Laptop" />
 		<constructor-arg name="price" value="298098" />
 		<!-- <property name="name" value="Laptop" /> <property name="price" value="298098" 
 			/> -->
 	</bean>
 
-	<bean id="ItemBean1" class="com.zensar.Item" lazy-init="true" >
+	<bean id="item" class="com.zensar.Item" >
 	    
 		<property name="name" value="Computer" />
 		<property name="price" value="980980" />
 	</bean>
+	
+<!-- 		<bean id="ItemBean2" class="com.zensar.Item"  > -->
+	    
+<!-- 		<property name="name" value="monitor" /> -->
+<!-- 		<property name="price" value="98098" /> -->
+<!-- 	</bean> -->
 
     <bean id="LifeCycleBean" class="com.zensar.LifeCycleBean" lazy-init="true" init-method="inilizer" destroy-method="MyDestroy" >
 	    
@@ -29,13 +35,11 @@ http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	<bean id="MyBeanPostProcessor" class="com.zensar.MyBeanPostProcessor" lazy-init="true" >
 	</bean> 
 	
-	<bean id="OrderBean" class="com.zensar.Order" lazy-init="true" 
-	init-method="inilizeMethod" destroy-method="destroyMethod">
-		<property name="item" ref="ItemBean" />
+	<bean id="OrderBean" class="com.zensar.Order" >
 		<property name="title" value="Laptop Purchase" />
 	</bean>
 
-	<bean id="OrderBean1" class="com.zensar.Order" lazy-init="true" init-method="inilizeMethod" destroy-method="destroyMethod">
+	<bean id="OrderBean1" class="com.zensar.Order" lazy-init="true" >
 		<property name="item" ref="ItemBean1" />
 		<property name="title" value="Computer Purchase" />
 	</bean>
